@@ -1,11 +1,13 @@
 package com.devsuperior.demo.dto;
 
 import com.devsuperior.demo.entities.City;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.web.bind.annotation.RestController;
 
 public class CityDTO {
 	
 	private Long id;
+	@NotBlank(message = "Campo requerido")
 	private String name;
 	
 	public CityDTO() {
